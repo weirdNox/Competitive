@@ -1,4 +1,9 @@
 *
 !.gitignore
-!*.sh
+!*/
+!*.c
 !*.cpp
+!*.py
+!*in
+!*.sh
+!*.txt
