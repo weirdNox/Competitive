@@ -370,7 +370,7 @@ int main(int ArgCount, char *ArgVals[]) {
             if(Score > BestScore || (Score == BestScore && Pics[I].TagCount < Pics[BestNextIndex].TagCount)) {
                 BestNextIndex = I;
                 BestScore = Score;
-                if(Score == MaxScore && Pics[I].TagCount <= Pics[PreviousPicIndex].TagCount) {
+                if(Score >= 0.25*MaxScore) {
                     break;
                 }
             }
