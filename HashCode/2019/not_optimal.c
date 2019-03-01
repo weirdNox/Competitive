@@ -331,7 +331,7 @@ int main(int ArgCount, char *ArgVals[]) {
                 Best = J;
                 BestSame = SameTags;
                 BestCount = Pic2->TagCount;
-                if(SameTags == 0) {
+                if(SameTags == 0 && Pic1->TagCount + Pic2->TagCount > 37) {
                     break;
                 }
             }
@@ -370,7 +370,7 @@ int main(int ArgCount, char *ArgVals[]) {
             if(Score > BestScore || (Score == BestScore && Pics[I].TagCount < Pics[BestNextIndex].TagCount)) {
                 BestNextIndex = I;
                 BestScore = Score;
-                if(Score >= 0.25*MaxScore) {
+                if(Score >= 0.3*MaxScore) {
                     break;
                 }
             }
